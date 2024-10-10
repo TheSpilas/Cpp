@@ -3,6 +3,16 @@
 
 #include <iostream>
 #include <string>
-void impr(const std::string str);
+
+class my_class 
+{
+private:
+    std::string str;
+
+public:
+    my_class();
+    my_class(const std::string str);
+    void print_my_element() const;
+};
 
 #endif
