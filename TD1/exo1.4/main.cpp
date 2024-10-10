@@ -1,27 +1,22 @@
 #include "main.h"
 
-class my_class
-{
-private:
-    std::string sting;
-public:
-    my_class() : ;
-    ~my_class();
-};
 
-main::main(/* args */)
-{
-}
+my_class::my_class() : str("Hello World!") {}
 
-main::~main()
-{
-}
 
-void impr(const std::string str) {
+my_class::my_class(const std::string str) : str(str) {}
+
+
+void my_class::print_my_element() const {
     std::cout << str << std::endl;
 }
 
 int main() {
-    impr("Hello World!");
+    my_class obj1;
+    obj1.print_my_element();
+
+    my_class obj2("Hello World!");
+    obj2.print_my_element();
+
     return 0;
 }
