@@ -10,10 +10,8 @@ bool isPalindrome ( const string& input ) {
     queue<char> file;
 
     for (char c : input) {
-        if (isalpha(c)) {
-            pile.push(tolower(c));
-            file.push(tolower(c));
-        }
+        pile.push(c);
+        file.push(c);
     }
 
     while (!pile.empty() && !file.empty()) {
