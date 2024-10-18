@@ -41,14 +41,7 @@ map<int , int> countFrequencyOptimal ( const vector<int> & numbers ) {
     map<int, int> frequency;
     for (int i = 0; i < numbers.size(); i++) 
     {
-        if (frequency.find(numbers[i]) == frequency.end()) 
-        {
-            frequency[numbers[i]] = 1;
-        } 
-        else 
-        {
-            frequency[numbers[i]]++;
-        }
+        frequency[numbers[i]]++;
     }
     return frequency;
 } 
